@@ -6,7 +6,7 @@ TARGETS=hydro
 include make.inc
 
 INC = -I$(HDF_INC)
-LIB = -L$(HDF_LIB) -lhdf5 -lhdf5_hl
+LIB = -L$(HDF_LIB) -lhdf5 -lhdf5_hl -lm
 
 EXCLUDE=
 SOURCES=$(filter-out $(EXCLUDE), $(wildcard *.c))
