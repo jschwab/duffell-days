@@ -16,11 +16,11 @@ all: $(TARGETS)
 
 hydro: $(OBJECTS)
 	@echo "--> hydro"
-	@$(CC) -o hydro.x $(OBJECTS) $(LIB)
+	@$(CC) $(CFLAGS) -o hydro.x $(OBJECTS) $(LIB)
 
 .c.o:
 	@echo CC $<
-	@$(CC) $(INC) -c -o $@ $<
+	@$(CC) $(CFLAGS) $(INC) -c -o $@ $<
 
 clean:
 	rm -f $(OBJECTS) hydro.x
